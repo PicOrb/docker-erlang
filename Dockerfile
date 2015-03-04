@@ -8,7 +8,7 @@ CMD ["/sbin/my_init"]
 
 RUN \
   apt-get update && \
-  apt-get -y install build-essential autoconf libncurses5-dev libwxgtk2.8-dev \
+  apt-get --fix-missing -y install build-essential autoconf libncurses5-dev libwxgtk2.8-dev \
   libgl1-mesa-dev libglu1-mesa-dev libpng3 libssh-dev unixodbc-dev openssl fop xsltproc
   
 RUN \
