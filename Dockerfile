@@ -7,8 +7,9 @@ ENV DEBIAN_FRONTEND noninteractive
 CMD ["/sbin/my_init"]
 
 RUN \
+  apt-get update && \
   apt-get -y install build-essential autoconf libncurses5-dev libwxgtk2.8-dev \
-  libgl1-mesa-dev libglu1-mesa-dev libpng3 libssh-dev unixodbc-dev
+  libgl1-mesa-dev libglu1-mesa-dev libpng3 libssh-dev unixodbc-dev openssl fop xsltproc
   
 RUN \
   curl -O http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
