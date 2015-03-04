@@ -15,6 +15,6 @@ RUN \
   dpkg -i erlang-solutions_1.0_all.deb && \
   rm erlang-solutions_1.0_all.deb && \
   apt-get update && \
-  apt-get install -y erlang=1:$ERLANG_VERSION erlang-base-hipe=1:$ERLANG_VERSION
+  apt-get install -y erlang-nox erlang=1:$ERLANG_VERSION erlang-base-hipe=1:$ERLANG_VERSION
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
